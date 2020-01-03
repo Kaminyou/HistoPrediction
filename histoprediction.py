@@ -245,8 +245,8 @@ if __name__ == '__main__':
     fp.write("Mucosa: "+ str(sum(histo_matrix_label_f == 5)) + "\n")
     fp.write("Adipose: "+ str(sum(histo_matrix_label_f == 6)) + "\n")
     fp.write("Empty: "+ str(sum(histo_matrix_label_f == 7)) + "\n")
-    if sum(histo_matrix_label_f == 1) != 0:
-        fp.write("Tumor/Stroma ratio = "+ str(sum(histo_matrix_label_f == 0)/sum(histo_matrix_label_f == 1)) + "\n")
+    #if sum(histo_matrix_label_f == 1) != 0:
+    #    fp.write("Tumor/Stroma ratio = "+ str(sum(histo_matrix_label_f == 0)/(sum(histo_matrix_label_f == 1) + sum(histo_matrix_label_f == 2))) + "\n")
     fp.close()
     
     print("=========Summary Report=========")
@@ -258,8 +258,8 @@ if __name__ == '__main__':
     print("Mucosa: ", str(sum(histo_matrix_label_f == 5)))
     print("Adipose: ", str(sum(histo_matrix_label_f == 6)))
     print("Empty: ", str(sum(histo_matrix_label_f == 7)))
-    if sum(histo_matrix_label_f == 1) != 0:
-        print("Tumor/Stroma ratio = ", str(sum(histo_matrix_label_f == 0)/sum(histo_matrix_label_f == 1)))
+    #if sum(histo_matrix_label_f == 1) != 0:
+    #    print("Tumor/Stroma ratio = ", str(sum(histo_matrix_label_f == 0)/(sum(histo_matrix_label_f == 1) + sum(histo_matrix_label_f == 2))))
     
     # Plot result
     plt.figure(figsize = (10,7))
